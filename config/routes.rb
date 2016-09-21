@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get  '/contact',    to: 'pages#contact'
   get  '/product',    to: 'pages#product'
   get  '/dicas',    to: 'pages#dicas'
+  get  '/cadastrar',    to: 'users#new'
 end
