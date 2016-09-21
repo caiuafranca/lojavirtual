@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
   root to: 'pages#home'
-  get 'pages/about'
-  get 'pages/contact'
+  get  '/about',    to: 'pages#about'
+  get  '/contact',    to: 'pages#contact'
+  get  '/product',    to: 'pages#product'
+  get  '/dicas',    to: 'pages#dicas'
 end
