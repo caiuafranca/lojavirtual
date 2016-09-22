@@ -1,35 +1,22 @@
+<%= provide(:title, "Cadastrar") %>
 <h1>Novo Usuário</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= f.label "Nome" %>
+      <%= f.text_field :name %>
 
-<div class="row-fluid">
-  <div class="span4 well">
-    <%= form_for @user, :html => {:class => "form-horizontal"} do |m| %>
-        <fieldset>
-          <legend>Novo Usuário</legend>
-          <div class="control-group">
-            <%= m.label :name, :class => "control-label" %>
-            <div class="controls">
-              <%= m.text_field :name, :class => "input-xlarge" %>
-            </div>
-          </div>
+      <%= f.label "Email" %>
+      <%= f.email_field :email %>
 
-          <div class="control-group">
-            <%= m.label :email, :class => "control-label" %>
-            <div class="controls">
-              <%= m.text_field :email, :class => "input-xlarge" %>
-            </div>
-          </div>
+      <%= f.label "Senha" %>
+      <%= f.password_field :password %>
 
-          <div class="control-group">
-            <%= m.label :password, :class => "control-label" %>
-            <div class="controls">
-              <%= m.text_field :password, :class => "input-xlarge" %>
-            </div>
-          </div>
+      <%= f.label "Confirmar Senha" %>
+      <%= f.password_field :password_confirmation %>
 
-          <div class="form-actions">
-            <%= m.submit :class => "btn btn-primary" %>
-          </div>
-        </fieldset>
+      <%= f.submit "Criar Conta", class: "btn btn-primary" %>
     <% end %>
+    <br/>
   </div>
 </div>
