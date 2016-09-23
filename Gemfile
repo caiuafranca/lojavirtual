@@ -24,6 +24,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 #gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'bootstrap-sass', '3.3.6'
+
+gem "will_paginate", "~> 3.0.4"
 #gem 'autoprefixer-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

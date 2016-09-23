@@ -1,15 +1,7 @@
 <%= provide(:title, "Postagens") %>
 <p id="notice"><%= notice %></p>
 
-<h1>Microposts</h1>
-
-    <% @microposts.each do |micropost| %>
-      <ol>
-          <%= gravatar_for(micropost.user)%>
-          <%= micropost.user.name %>
-          <%= micropost.content %>
-    </ol>    
-    <% end %>
-<br/>
-
-<%= link_to 'New Micropost', new_micropost_path %>
+<h3>Postagens (<%= @microposts.count %>)</h3>
+  <ol class="microposts">
+    <%= render @microposts %>
+  </ol>
