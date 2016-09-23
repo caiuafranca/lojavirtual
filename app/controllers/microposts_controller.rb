@@ -1,10 +1,10 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+  before_action :set_micropost, only: [:show]
 
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.joins(:user).all
+    @microposts = Micropost.joins(:user).all.order('created_at DESC')
   end
 
   # GET /microposts/1
