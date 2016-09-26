@@ -3,7 +3,7 @@ class CreateTips < ActiveRecord::Migration[5.0]
     create_table :tips do |t|
       t.string :title
       t.string :description
-      t.string :image
+      t.string :category_id
 
       t.timestamps
     end

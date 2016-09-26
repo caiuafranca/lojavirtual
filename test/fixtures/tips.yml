@@ -3,9 +3,9 @@
 one:
   title: MyString
   description: MyString
-  image: MyString
+  category_id: MyString
 
 two:
   title: MyString
   description: MyString
-  image: MyString
+  category_id: MyString

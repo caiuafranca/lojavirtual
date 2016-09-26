@@ -1,3 +1,4 @@
+<%= provide(:title, "Dicas") %>
 <p id="notice"><%= notice %></p>
 
 <h1>Tips</h1>
@@ -7,7 +8,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Image</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +18,7 @@
       <tr>
         <td><%= tip.title %></td>
         <td><%= tip.description %></td>
-        <td><%= tip.image %></td>
+        <td><%= tip.category.title %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
         <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

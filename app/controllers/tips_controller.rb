@@ -6,7 +6,6 @@ class TipsController < ApplicationController
   def index
     @tips = Tip.all
   end
-
   # GET /tips/1
   # GET /tips/1.json
   def show
@@ -69,6 +68,6 @@ class TipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tip_params
-      params.require(:tip).permit(:title, :description, :image)
+      params.require(:tip).permit(:title, :description, :category_id)
     end
 end
