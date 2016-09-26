@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tips
+  resources :categories
   resources :microposts
   resources :users
   root to: 'pages#home'
