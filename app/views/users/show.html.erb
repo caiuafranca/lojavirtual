@@ -12,6 +12,12 @@
     </section>
   </aside>
   <div class="col-md-8">
+    <%= form_for(@user.microposts.new) do |f| %>
+      <%=  f.hidden_field :user_id, :value => @user.id %>
+      <%= f.label "conteudo" %>
+      <%= f.text_area :content %>
+      <%= f.submit "Postar", class: "btn btn-primary" %>
+    <% end %>
     <% if @user.microposts.any? %>
       <h3>Postagens (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
