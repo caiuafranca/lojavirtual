@@ -177,3 +177,10 @@ span.picture {
     border: 0;
   }
 }
+.truncate {
+width: 250px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 15px;
+}
